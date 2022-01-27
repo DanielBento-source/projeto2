@@ -7,22 +7,30 @@ let elemPlayer=[];
 let pcWin = 0;
 let playerWin = 0;
 let empate = 0;
-var novamente;
+var novamente = 'sim';
 
+console.log()
 
 while (novamente == 'sim') {
 
+    if (novamente == 'sim'){
+        empate = 0
+        playerWin = 0
+        pcWin = 0
+    }
+
     console.log ('JOKENPÔ! ')
+
+    console.log()
 
     quest1 = +prompt('Quantas vezes você quer jogar? ')
 
-    console.log('')
+    console.log()
 
     
     for (var rodadas = 0; rodadas < quest1; rodadas++){
         console.log('sua vez. ')
 
-        console.log('')
 
         elemPlayer = prompt ('pedra, papel ou tesoura? ').toLowerCase();
 
@@ -30,7 +38,7 @@ while (novamente == 'sim') {
 
         console.log('vez do pc.')
 
-        console.log('')
+        
 
 
         pc = Math.floor(Math.random() * elemPc.length );    
@@ -96,25 +104,24 @@ while (novamente == 'sim') {
             empate++;
         }  
 
-        console.log('')
+        console.log()
     }
-
-        console.log('');
+    console.log('Resultado geral: ')
 
         console.log('empate');
         console.log(empate);
         
-        console.log('');
+        console.log();
 
         console.log('player');
         console.log(playerWin)
 
-        console.log('')
+        console.log()
 
         console.log('pc')
         console.log(pcWin)
 
-        console.log('');
+        console.log();
 
 
         if (pcWin > playerWin){
@@ -125,14 +132,24 @@ while (novamente == 'sim') {
             console.log ('Você é o grande campeão !!!')
         }
 
-    novamente = prompt ('Deseja jogar novamente? ').toLowerCase();
+        console.log()
+
+        novamente = prompt ('Deseja jogar novamente? ').toLowerCase();
+        if (novamente != 'sim'){
+            console.log()
+            console.log ('game Over ')
+
+        }
    
 } 
+
+console.log()
+
+
 
 
         
 
-    // requisitos 8, aulas do Gabriel
 
 
 

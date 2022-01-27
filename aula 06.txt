@@ -1,0 +1,1 @@
+Usei o for pra repetir o jogo de acordo com a quantidade de rodadas escolhidas 
